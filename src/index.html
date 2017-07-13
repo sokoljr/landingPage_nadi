@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable=no">
+    <!-- Title -->
+    <title>Онлайн-проект «Время действовать и зарабатывать»</title>
+    <meta name="description" content="Мы научим Вас зарабатывать в Интернете не выходя из дома. За руку, по шагам мы доведем Вас до дохода.">
+    <meta name="keywords" content="Заработок в интернете, заработок в интернете без вложений, зарабатывать деньги, деньги сайт, зарабатывать интернет, крупный заработок, доход в интернете, легкие деньги, как заработать в интернете, хороший доход, работа на дому">
+    <meta name="author" content="Sokol Sergey">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+    <!-- modal -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title">Хочу узнать больше <i class="fa fa-info-circle double-flash" aria-hidden="true"></i></h3>
+                </div>
+                <div class="modal-body">
+                    <form class="modal_form" data-toggle="validator" role="form">
+                        <div class="form-group">
+                            <label for="name" class="control-label">Имя</label>
+                            <input type="text" class="form-control" id="name" placeholder="Иван Иванов" data-error="Введите свое имя" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="control-label">Мобильный телефон</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Мобильный телефон (WhatsApp/Viber)" data-error="Введите свой телефон" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="control-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="MyEmail@mailito.com" data-error="Введите свой email" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="page_social" class="control-label">Социальная сеть</label>
+                            <input type="text" class="form-control" id="page_social" placeholder="Страница в соц. сети (н-р, https://vk.com/id381513488))" data-error="Введите свой страничку социальной сети" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <header>
+        <div class="container-fluid">
+
+            <nav class="navbar navbar-default navbar-fixed-top nav_top">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Время действовать логотип"></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#advantages">Преимущества</a></li>
+                            <li><a href="#whoUs">Кому подходит</a></li>
+                            <li><a href="#reviews">Отзывы</a></li>
+                            <li><a href="#feature">Что получите</a></li>
+                            <li><a href="#footer">Присоединиться</a></li>
+                        </ul>
+                        <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary button-blue btn-sm"><i class="fa fa-question-circle-o"></i> Задать вопрос</button>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+
+        <div class="slick-slider slider">
+            <div class="item1 photo is-animating">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="slider-descr">
+                                <div class="slider__title">
+                                    <h2>РАБОТА ПОЖИРАЕТ ВАШЕ ВРЕМЯ, А СЕМЬЯ ОСТАЕТСЯ БЕЗ ВНИМАНИЯ?</h2>
+                                </div>
+                                <div class="slider__text">
+                                    <p>Исправьте это! С нашим проектом Вы реализуете свою мечту работать меньше, получать
+                                        более высокий доход и иметь время для семьи, даря близким положительные эмоции!</p>
+                                </div>
+                                <div class="slider__button">
+                                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary button-blue btn-sm edit-content">ХОЧУ ИСПРАВИТЬ <span class="double-flash"><i class="fa fa-clock-o" aria-hidden="true"></i></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item2 photo is-animating">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="slider-descr">
+                                <div class="slider__title">
+                                    <h2>Получили зарплату и снова в отчаянии? Банально не хватает на жизнь?</h2>
+                                </div>
+                                <div class="slider__text">
+                                    <p>Повысьте свой уровень жизни, сделав наш проект своим основным или дополнительным заработком.<br>Ваша первая цель — достичь 500$ в месяц и наша команда поможет Вам в этом!</p>
+                                </div>
+                                <div class="slider__button">
+                                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary button-blue btn-sm edit-content">ХОЧУ ВЫЙТИ НА 500$ В МЕСЯЦ <span class="double-flash"><i class="fa fa-usd" aria-hidden="true"></i></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item3 photo is-animating">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="slider-descr">
+                                <div class="slider__title">
+                                    <h2>Мечты о хороших доходах и работе дома могут стать Вашей реальностью!</h2>
+                                </div>
+                                <div class="slider__text">
+                                    <p>Оставь мысли о ранних вставаниях, переполненном транспорте и навалившейся усталости.<br>Достойный заработок и никаких мучений. Работай из дома в удобное для тебя время!</p>
+                                </div>
+                                <div class="slider__button">
+                                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary button-blue btn-sm edit-content">ХОЧУ ЗАРАБАТЫВАТЬ ДОМА <span class="double-flash"><i class="fa fa-home" aria-hidden="true"></i></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item4 photo is-animating">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="slider-descr">
+                                <div class="slider__title">
+                                    <h2>Считаете, что место проживания играет важную роль в доходах?</h2>
+                                </div>
+                                <div class="slider__text">
+                                    <p>Удаленная работа в нашем проекте — это огромные возможности для Вас, даже если Вы живёте в небольшом городке или селе. Вы создадите свою команду из людей других городов, стран. Главное — наличие интернета!</p>
+                                </div>
+                                <div class="slider__button">
+                                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary button-blue btn-sm edit-content">ХОЧУ УЗНАТЬ БОЛЬШЕ ОБ УДАЛЕННОЙ РАБОТЕ <span class="double-flash"><i class="fa fa-laptop" aria-hidden="true"></i></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item5 photo is-animating">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="slider-descr">
+                                <div class="slider__title">
+                                    <h2>Путешествие за границу, о котором Вы так мечтаете, станет реальностью!</h2>
+                                </div>
+                                <div class="slider__text">
+                                    <p>Причем БЕСПЛАТНО! Как? Компания-партнер оплачивает до 4 путешествий в год. Хотите, чтобы Ваша мечта об отпуске за рубежом осуществилась? Ждем в нашем проекте!</p>
+                                </div>
+                                <div class="slider__button">
+                                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary button-blue btn-sm edit-content">ХОЧУ ОТДЫХАТЬ ЗА ГРАНИЦЕЙ <span class="double-flash"><i class="fa fa-plane" aria-hidden="true"></i></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item6 photo is-animating">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="slider-descr">
+                                <div class="slider__title">
+                                    <h2>Все говорят: время — деньги! Но мало кто следует этому.</h2>
+                                </div>
+                                <div class="slider__text">
+                                    <p>Не хотите получать мизерную зарплату за потраченные годы? Превратите свое время в конвертируемую валюту! В нашем проекте Вас ждет свой постоянный доход изо дня в день.</p>
+                                </div>
+                                <div class="slider__button">
+                                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary button-blue btn-sm edit-content">ХОЧУ ПОЛУЧАТЬ ПОСТОЯННЫЙ ДОХОД <span class="double-flash"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="advantages" class="advantages">
+
+            <div class="container text-center">
+
+                <div class="advantages__title">
+                    <h2>Наши преимущества</h2>
+                </div>
+
+                <div class="advantages__boxes">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 box box-work">
+                            <div class="box__img"><img class="img-responsive" src="img/studying.png" alt="studying"></div>
+                            <div class="box__info">
+                                <i class="fa fa-caret-up"></i>
+                                <p>Удаленная работа в комфортных для Вас условиях</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 box box-calendar">
+                            <div class="box__img"><img class="img-responsive" src="img/wall-calendar.png" alt="calendar"></div>
+                            <div class="box__info">
+                                <i class="fa fa-caret-up"></i>
+                                <p>Свободный график и полная финансовая независимость</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 box box-support">
+                            <div class="box__img"><img class="img-responsive" src="img/chatting.png" alt="support"></div>
+                            <div class="box__info">
+                                <i class="fa fa-caret-up"></i>
+                                <p>Бесплатная поддержка 24 часа в сутки и обучение онлайн</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 box box-career">
+                            <div class="box__img"><img class="img-responsive" src="img/stats.png" alt="career"></div>
+                            <div class="box__info">
+                                <i class="fa fa-caret-up"></i>
+                                <p>Возможность финансового и карьерного роста</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advantages__footer">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <span>
+                                            <i class="fa fa-info-circle glyphicon glyphicon fa fa"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <p>Все просто. Не требуется специальных навыков. Вы получите понятную и простую </br> пошаговую схему заработка в Интернет, которая действительно работает.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button data-toggle="modal" data-target="#myModal" class="btn btn-primary button-blue btn-sm edit-content">Узнать больше</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="form-box top-form">
+
+            <div class="container">
+                <div class="col-sm-6">
+                    <div class="top-form__title">
+                        <h1>НУЖЕН ДОПОЛНИТЕЛЬНЫЙ ИЛИ ОСНОВНОЙ ДОХОД?</h1>
+                    </div>
+                    <div class="top-form__descr">
+                        <p>Введите данные в форму справа и получите доступ к <strong>бесплатному обучению</strong>, которое поможет создать собственный бизнес в сети Интернет и начать зарабатывать деньги! Обучение и работу в Интернет можно совмещать с основной работой.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="top-form__form">
+                        <form class="form1" data-toggle="validator" role="form">
+                            <div class="form-group">
+                                <label for="name1" class="control-label">Имя</label>
+                                <input type="text" class="form-control" id="name1" placeholder="Иван Иванов" data-error="Введите свое имя" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone1" class="control-label">Мобильный телефон</label>
+                                <input type="tel" class="form-control" id="phone1" placeholder="Мобильный телефон (WhatsApp/Viber)" data-error="Введите свой телефон" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email1" class="control-label">Email</label>
+                                <input type="email" class="form-control" id="email1" placeholder="MyEmail@mailito.com" data-error="Введите свой email" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="page_social1" class="control-label">Социальная сеть</label>
+                                <input type="text" class="form-control" id="page_social1" placeholder="Страница в соц. сети (н-р, https://vk.com/id381513488))" data-error="Введите свой страничку социальной сети" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="whoUs" class="who-us">
+            <div class="container text-center">
+                <div class="who-us__title">
+                    <h2><span>Кому</span> это подходит ?</h2>
+                </div>
+                <div class="who-us__boxes">
+                    <div class="row top-boxes">
+                        <div class="col-sm-4">
+                            <div class="box__img"><img class="img-responsive" src="img/p1.jpg" alt="p1"></div>
+                            <div class="box__info">
+                                <div class="title">
+                                    <h3>Студентам</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>Которым нужно совмещать учебу и подработку, работа через Интернет – лучшее решение.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="box__img"><img class="img-responsive" src="img/p2.jpg" alt="p2"></div>
+                            <div class="box__info">
+                                <div class="title">
+                                    <h3>Молодым мамам</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>Которые находятся в декретном отпуске, но хотят продолжать трудовую деятельность.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="box__img"><img class="img-responsive" src="img/p3.jpg" alt="p3"></div>
+                            <div class="box__info">
+                                <div class="title">
+                                    <h3>Людям в возрасте</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>Проживающим на пенсию, но у которых есть стремление жить по европейским стандартам.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="box__img"><img class="img-responsive" src="img/p4.jpg" alt=""></div>
+                            <div class="box__info">
+                                <div class="title">
+                                    <h3>Трудоустроенным людям</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>У которых есть страх уйти с работы и остаться ни с чем, но желающие значительно увеличить свои доходы.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="box__img"><img class="img-responsive" src="img/p5.jpg" alt=""></div>
+                            <div class="box__info">
+                                <div class="title">
+                                    <h3>Безработным людям</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>Которые хотят получать достойную оплату труда, но которым не удалось найти подходящее предложение.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="box__img"><img class="img-responsive" src="img/p6.jpg" alt=""></div>
+                            <div class="box__info">
+                                <div class="title">
+                                    <h3>А также...</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>Для всех, кто проводит свободное время в Интернет.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="who-us__counter">
+                    <div class="title">
+                        <h2>К нам присоеденилось</h2>
+                    </div>
+                    <div id="counts" class="counter">
+                        <div class="row text-center">
+                            <div class="col-sm-4">
+                                <div class="count-wrap">
+                                    <span id="todayCount" class="spincrement"></span>
+                                </div>
+                                <div class="count-label">
+                                    <p>За сегодня</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="count-wrap">
+                                    <span id="yestardayCount" class="spincrement"></span>
+                                </div>
+                                <div class="count-label">
+                                    <p>За вчера</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="count-wrap">
+                                    <span id="weekCount" class="spincrement"></span>
+                                </div>
+                                <div class="count-label">
+                                    <p>За неделю</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews">
+            <div class="container">
+                <div class="reviews__title text-center">
+                    <h2>ОТЗЫВЫ УЧАСТНИКОВ ПРОЕКТА</h2>
+                </div>
+                <div class="reviews__slider">
+                    <div class="reviews__1">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="img">
+                                    <img src="img/partner1.jpg" alt="partner1">
+                                </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="name">
+                                    <h3>Даали Елена</h3>
+                                </div>
+                                <div class="title">
+                                    <p>Всего за 4 года, будучи студентом ВУЗа, приобрела первую недвижимость</p>
+                                </div>
+                                <div class="review">
+                                    <p>Будучи отличницей, я вовремя сняла «розовые очки» на возможность в нашем государстве после ВУЗа устроиться на высокооплачиваемую работу. Везде нужен стаж, опыт и хорошие связи.  Поэтому пришла идея создать своё дело, а с помощью Интернет это удобно, не требует финансовых вложений, в отличие от традиционного бизнеса. Уже сейчас мой ежемесячный доход более чем в 8 раз больше, чем зарплата младшего специалиста в нашем регионе!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__2">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="img">
+                                    <img src="img/partner2.jpg" alt="partner2">
+                                </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="name">
+                                    <h3>Ничипорчук Ольга</h3>
+                                </div>
+                                <div class="title">
+                                    <p>Студент финансового факультета, всего за 2 года работы в проекте заработала более 12000$</p>
+                                </div>
+                                <div class="review">
+                                    <p>У меня был опыт работы по специальности всего 1 месяц - производственная практика в банке. Да, мне хватило одного месяца, чтобы понять, что это не для меня. Я увидела, как там работают люди, каких нервов, сил, времени им это стоит, и, самое главное, какие гроши им за это платят... ((( И тут пришло осознание того, что я так не хочу!!! Нужно что-то начинать своё, своё дело, свой бизнес, более перспективный, более прибыльный! Как классно, что есть такой проект, где неважно, сколько Вам лет, какой у Вас социальный статус, какое образование, и Ваш доход зависит только от Вашего желания и действий.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__3">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="img">
+                                    <img src="img/partner3.jpg" alt="partner3">
+                                </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="name">
+                                    <h3>Чередниченко Татьяна</h3>
+                                </div>
+                                <div class="title">
+                                    <p>Из домохозяйки в бизнес-леди</p>
+                                </div>
+                                <div class="review">
+                                    <p>Экономист по образованию, я никогда не думала, что будет так сложно после декрета устроиться на работу, имея высшее образование, но без опыта. Всё, что мне предложили на тот момент - это секретарь в налоговой и минимальный оклад 50$. От этого предложения я отказалась. На этом закончились мои поиски работы по найму. Мне повезло, что судьба связала мою жизнь с проектом. Сегодня я строю свой бизнес в Интернет, провожу всё время с семьей (у нас 2-е детей), получаю отличный доход, могу позволить себе отдых за границей!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__4">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="img">
+                                    <img src="img/partner4.jpg" alt="partner4">
+                                </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="name">
+                                    <h3>Лось Светлана</h3>
+                                </div>
+                                <div class="title">
+                                    <p>Инвалид-колясочник из небольшого села, но с большими мечтами</p>
+                                </div>
+                                <div class="review">
+                                    <p>Я инвалид 1А группы, и не могу самостоятельно передвигаться.&nbsp;Но это никогда не было для меня каким-то ограничением, благодаря поддержке родных я не ощущала дискомфорт в этом плане. Я закончила школу с золотой медалью, получила педагогическое образование. По состоянию здоровья работать по специальности не смогла. И я уже смирилась с тем, что буду выживать на государственную пенсию и как-то мириться с этими копейками. Но тут мне предложили попробовать себя в проекте «Время действовать», я сразу приняла решение, что попробую. Сейчас я могу себе позволить то, что хочу, а не то, на что хватает пенсии.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__5">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="img">
+                                    <img src="img/partner5.jpg" alt="partner5">
+                                </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="name">
+                                    <h3>Исаева Анна</h3>
+                                </div>
+                                <div class="title">
+                                    <p>Предприниматель на рынке, мерчендайзер</p>
+                                </div>
+                                <div class="review">
+                                    <p>До проекта работала: кассиром, реализатором на рынке, мерчендайзером. И даже успела попробовать открыть традиционный бизнес, но настал момент, когда я всё потеряла! Кризис, сами понимаете!&nbsp;Моя лучшая подруга, предложила попробовать бизнес в Интернет. Меня абсолютно все устроило, так как я могла сама выбрать для себя время работы и количество часов, которые я могу выделять! Доходы я увидела уже в первый месяц, и они постоянно растут. Результат на лицо – при минимальных затратах (хороший интернет, время и желание) у меня стабильный доход в несколько раз превышающий минимальную заработную плату в моей стране!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-box bottom-form">
+
+            <div class="container">
+                <div class="col-sm-6">
+                    <div class="top-form__title">
+                        <h2>ЖЕЛАЕТЕ ДОБИТЬСЯ ТАКИХ ЖЕ РЕЗУЛЬТАТОВ?</h2>
+                    </div>
+                    <div class="top-form__descr">
+                        <p>Тогда прямо сейчас заполняйте форму, и мы откроем Вам бесплатный доступ к обучающему курсу по созданию собственного высокодоходного бизнеса в сети Интернет. <strong>Без вложений и специальных навыков!</strong> От Вас нужно только желание изменить свою жизнь к лучшему и доступ в Интернет.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="top-form__form">
+                        <form class="form2" data-toggle="validator" role="form">
+                            <div class="form-group">
+                                <label for="name1" class="control-label">Имя</label>
+                                <input type="text" class="form-control" id="name2" placeholder="Иван Иванов" data-error="Введите свое имя" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone1" class="control-label">Мобильный телефон</label>
+                                <input type="tel" class="form-control" id="phone2" placeholder="Мобильный телефон (WhatsApp/Viber)" data-error="Введите свой телефон" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email1" class="control-label">Email</label>
+                                <input type="email" class="form-control" id="email2" placeholder="MyEmail@mailito.com" data-error="Введите свой email" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="page_social1" class="control-label">Социальная сеть</label>
+                                <input type="text" class="form-control" id="page_social2" placeholder="Страница в соц. сети (н-р, https://vk.com/id381513488))" data-error="Введите свой страничку социальной сети" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="feature" class="feature">
+
+            <div class="container text-center">
+                <div class="feature__title">
+                    <h2><strong>ЧТО ВЫ ПОЛУЧАЕТЕ</strong> В НАШЕМ ПРОЕКТЕ?</h2>
+                </div>
+                <div class="feature__boxes">
+                    <div class="row top-boxes">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="box__img"><img class="img-responsive" src="img/z1.jpg" alt="z1"></div>
+                            <div class="box__info bottom">
+                                <i class="fa fa-caret-up"></i>
+                                <div class="title">
+                                    <h3>ВЫСОКИЙ СТАБИЛЬНЫЙ ДОХОД</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>Ваш доход не ограничен. Все зависит от Вашего стремления работать и зарабатывать.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="box__info top">
+                                <div class="title">
+                                    <h3>ПОДДЕРЖКУ ОТ БИЗНЕС-ПАРТНЕРОВ</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>Мы научим Вас зарабатывать в Интернет. За руку, по шагам мы доведем Вас до дохода. Нам выгодно иметь сильных и целеустремленных бизнес-партнеров.</p>
+                                </div>
+                                <i class="fa fa-caret-down"></i>
+                            </div>
+                            <div class="box__img"><img class="img-responsive" src="img/z2.jpg" alt="z2"></div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="box__img"><img class="img-responsive" src="img/z3.jpg" alt="z3"></div>
+                            <div class="box__info bottom">
+                                <i class="fa fa-caret-up"></i>
+                                <div class="title">
+                                    <h3>ЛЕГАЛЬНЫЙ ОФИЦИАЛЬНЫЙ БИЗНЕС</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>Никаких пирамид, опционов и прочей ерунды для любителей халявы. Мы предлагаем настоящий бизнес с официальными доходами и выплатами через банк.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="box__info top">
+                                <div class="title">
+                                    <h3>ДОХОД ОТ БИЗНЕСА КРУГЛЫЙ ГОД</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>В этом бизнесе нет сезонности и падения спроса. Даже в отпуске за границей Вы сможете зарабатывать, нужен лишь Интернет.</p>
+                                </div>
+                                <i class="fa fa-caret-down"></i>
+                            </div>
+                            <div class="box__img"><img class="img-responsive" src="img/z4.jpg" alt="z4"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="box__img"><img class="img-responsive" src="img/z5.jpg" alt="z5"></div>
+                            <div class="box__info bottom">
+                                <i class="fa fa-caret-up"></i>
+                                <div class="title">
+                                    <h3>СВОБОДНЫЙ ГРАФИК</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>Вы самостоятельно определяете, сколько времени уделять работе, а сколько своим близким.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="box__info top">
+                                <div class="title">
+                                    <h3>ОТСУТСТВИЕ ФИНАНСОВЫХ ВЛОЖЕНИЙ</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>Вы абсолютно без риска начинаете этот бизнес, а значит, действительно можете изменить свою жизнь к лучшему и добиться финансовой свободы.</p>
+                                </div>
+                                <i class="fa fa-caret-down"></i>
+                            </div>
+                            <div class="box__img"><img class="img-responsive" src="img/z6.jpg" alt="z6"></div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="box__img"><img class="img-responsive" src="img/z7.jpg" alt="z7"></div>
+                            <div class="box__info bottom">
+                                <i class="fa fa-caret-up"></i>
+                                <div class="title">
+                                    <h3>УДОБНОЕ ИНФОРМАТИВНОЕ ОБУЧЕНИЕ</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>Обучение интернет-бизнесу разработано как для новичков, так и для опытных. Уроки и действия проходят по шагам, выполнить которые может каждый.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="box__info top">
+                                <div class="title">
+                                    <h3>ОТСУТСТВИЕ ЛИЧНЫХ ПРОДАЖ</h3>
+                                </div>
+                                <div class="descr">
+                                    <p>Без беготни с сумками и мешками, умоляя купить товар. Вся работа ведется в Интернет, не выходя из дома.</p>
+                                </div>
+                                <i class="fa fa-caret-down"></i>
+                            </div>
+                            <div class="box__img"><img class="img-responsive" src="img/z8.jpg" alt="z8"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="footer__title text-center">
+                    <h2>Остались вопросы?</h2>
+                </div>
+                <div class="footer__social">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="title_name text-center">
+                                <h2>Надежда Бедняк, Партнер проекта</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="img">
+                                        <img class="img-responsive" src="img/nadya.jpg" alt="Надежда Бедняк">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="contacts">
+                                        <div class="box contacts__email">
+                                            <div class="img"><a href="mailto:example@gmail.com" class=""><i
+                                                    class="fa fa-envelope-o"></i></a></div>
+                                            <div class="info">
+                                                <h3>Электронная почта</h3>
+                                                <p><a href="mailto:example@gmail.com">example@gmail.com</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="box contacts__phone">
+                                            <div class="img"><i class="fa fa-phone"></i></div>
+                                            <div class="info">
+                                                <h3>Телефон (Viber, Whatsapp)</h3>
+                                                <p>+380677777777</p>
+                                            </div>
+                                        </div>
+                                        <div class="box contacts__vk">
+                                            <div class="img"><a target="_blank" href="https://vk.com/texample"><i
+                                                    class="fa fa-vk"></i></a></div>
+                                            <div class="info">
+                                                <h3>Вконтакте</h3>
+                                                <p><a target="_blank" href="https://vk.com/example">https://vk.com/example</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="box contacts__skype">
+                                            <div class="img"><a target="_blank" href="skype:tanya222142?chat"><i
+                                                    class="fa fa-skype"></i></a></div>
+                                            <div class="info">
+                                                <h3>Skype</h3>
+                                                <p><a target="_blank" href="skype:example?chat">example</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="footer-form__form">
+                                <form class="form3" data-toggle="validator" role="form">
+                                    <div class="form-group">
+                                        <label for="name1" class="control-label">Имя</label>
+                                        <input type="text" class="form-control" id="name3" placeholder="Иван Иванов"
+                                               data-error="Введите свое имя" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone1" class="control-label">Мобильный телефон</label>
+                                        <input type="tel" class="form-control" id="phone3"
+                                               placeholder="Мобильный телефон (WhatsApp/Viber)"
+                                               data-error="Введите свой телефон" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email1" class="control-label">Email</label>
+                                        <input type="email" class="form-control" id="email3"
+                                               placeholder="MyEmail@mailito.com" data-error="Введите свой email"
+                                               required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="page_social1" class="control-label">Социальная сеть</label>
+                                        <input type="text" class="form-control" id="page_social3"
+                                               placeholder="Страница в соц. сети (н-р, https://vk.com/id381513488))"
+                                               data-error="Введите свой страничку социальной сети" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button type="submit" class="btn btn-primary">Отправить</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <p>* Вы получите ответ на свой вопрос в течение 24 часов.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-left">
+                            <p style="color: #fff;">Копирование материалов сайта запрещено!</br>
+                                Все права защищены &copy; 2017</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#0" class="cd-top">Top</a>
+    </div>
+
+
+    <!-- script -->
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
+    <script src="libs/bootstrap/validator.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="libs/jquery/jquery.spincrement.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

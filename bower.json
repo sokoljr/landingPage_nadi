@@ -1,0 +1,21 @@
+{
+  "name": "landingPage",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Sokol Sergey"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sokoljr/landingPage_nadi",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "#3.3.7",
+    "jquery": "#1.12.4",
+    "font-awesome": "^4.7.0",
+    "slick-carousel": "^1.6.0"
+  }
+}

@@ -1,0 +1,148 @@
+@media screen and (max-width: $break-large) {
+  header {
+    .nav_top {
+      .navbar-header {
+        margin: 0;
+      }
+      .navbar-collapse {
+        .navbar-nav {
+          li {
+            a {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .button-blue {
+        float: none;
+      }
+    }
+  }
+  .advantages {
+    .advantages__footer {
+      button {
+        padding: 10px 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $break-md) {
+  .footer__social {
+    .img {
+      width: 40%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: $break-tablet) {
+  header {
+    .nav_top {
+      .button-blue {
+        width: 165px;
+        margin: 10px 0;
+        display: block;
+      }
+    }
+  }
+  .advantages {
+    .advantages__boxes {
+      .box__info, .box__img {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+  }
+  .form-box {
+    .top-form__descr, .top-form__title {
+      padding: 30px 0 0 0;
+    }
+  }
+  .reviews {
+    .reviews__slider {
+      .img {
+        width: 30%;
+        margin: 0 auto;
+      }
+    }
+  }
+.feature {
+  .feature__boxes {
+    .box__info {
+      margin-bottom: 20px;
+    }
+  }
+}
+}
+
+@media screen and (max-width: $break-smart) {
+  .modal {
+    .modal-header {
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+  .slider {
+    .slider-descr {
+      .slider__title {
+        h2 {
+          font-size: 28px;
+          &:after {
+            display: none;
+          }
+        }
+      }
+      .slider__text {
+        p {
+          font-size: 18px;
+        }
+      }
+      .slider__button {
+        button {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .footer__social {
+    .img {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: $break-mobile) {
+  .slider {
+    .photo {
+      padding: 0 10px;
+    }
+  }
+  .advantages {
+    .advantages__boxes {
+      .box__info {
+        padding: 30px 0;
+      }
+    }
+  }
+  .form-box {
+    .top-form__form {
+      button {
+        font-size: 18px;
+      }
+    }
+  }
+  footer {
+    .footer__social {
+      .contacts {
+        .info {
+          h3 {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
